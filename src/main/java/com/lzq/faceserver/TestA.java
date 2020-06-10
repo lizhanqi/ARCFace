@@ -68,7 +68,7 @@ public class TestA {
         //流直播
         String url = "http://ivi.bupt.edu.cn/hls/cctv6hd.m3u8";//cctv6
         url = "rtmp://58.200.131.2:1935/livetv/hunantv";
-        url = "rtmp://rtmp01open.ys7.com/openlive/5f49b6c11b7b4b6eafa1bda90337d05d.hd";
+//        url = "rtmp://rtmp01open.ys7.com/openlive/5f49b6c11b7b4b6eafa1bda90337d05d.hd";
         final String finalUrl = url;
         Thread thread = new Thread() {
             @Override
@@ -133,25 +133,27 @@ public class TestA {
                         //识别成功后的人脸信息结果
 //                        List<FaceInfo> faceInfos = new LinkedList<FaceInfo>();
                         //人脸识别
-                        int res = faceEngine.detectFaces(imageData, iplImage.width(), iplImage.height(), ImageFormat.CP_PAF_BGR24, frameResut.faceInfoList);
-                        currentShowFace = frameResut.faceInfoList;
-
-                        getFaces(frameResut);
+//                            int res = faceEngine.detectFaces(imageData, iplImage.width(), iplImage.height(), ImageFormat.CP_PAF_BGR24, frameResut.faceInfoList);
+//                        currentShowFace = frameResut.faceInfoList;
+//                        getFaces(frameResut);
                         //画人脸位置
                         for (FaceInfo faceInfo : currentShowFace) {
-
                             //特征提取2
-                            FaceFeature faceFeature2 = new FaceFeature();
-                            int extractCode2 = faceEngine.extractFaceFeature(frameResut.getImageData(),
-                                    frameResut.getIplImage().width(), frameResut.getIplImage().height(), ImageFormat.CP_PAF_BGR24, faceInfo
-                                    , faceFeature2);
-                            byte[] bytes = faceFeature2.getFeatureData();
-                            String s = new String(bytes);
-                            System.out.println("特征：" + s);
-                            FaceFeature faceFeature = new FaceFeature(s.getBytes());
-                            FaceSimilar faceSimilar = new FaceSimilar();
-                            int compareCode = faceEngine.compareFaceFeature(faceFeature, faceFeature2, faceSimilar);
-                            System.out.println("相似度：" + faceSimilar.getScore());
+//                            FaceFeature faceFeature2 = new FaceFeature();
+//                            int extractCode2 = faceEngine.extractFaceFeature(frameResut.getImageData(),
+//                                    frameResut.getIplImage().width(), frameResut.getIplImage().height(), ImageFormat.CP_PAF_BGR24, faceInfo
+//                                    , faceFeature2);
+//                            byte[] bytes = faceFeature2.getFeatureData();
+//                            String s = new String(bytes);
+//                            System.out.println("特征：" + s);
+//                            FaceFeature faceFeature = new FaceFeature(s.getBytes());
+//                            FaceSimilar faceSimilar = new FaceSimilar();
+//                            int compareCode = faceEngine.compareFaceFeature(faceFeature, faceFeature2, faceSimilar);
+//                            System.out.println("相似度：" + faceSimilar.getScore());
+//
+//
+
+
                             int left = faceInfo.getRect().getLeft();
                             int top = faceInfo.getRect().getTop();
                             int right = faceInfo.getRect().getRight();

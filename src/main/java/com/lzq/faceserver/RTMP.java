@@ -82,6 +82,7 @@ public class RTMP  {
             }
             //开始抓取
             grabber = new FFmpegFrameGrabber(videoPath);
+            grabber . setVideoBitrate(40000);
             grabber.start();
             //初始化扬声器
             audioFormat = new AudioFormat(grabber.getSampleRate(), 16, grabber.getAudioChannels(), true, true);
