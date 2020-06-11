@@ -139,7 +139,7 @@ public class TestA {
                         //画人脸位置
                         for (FaceInfo faceInfo : currentShowFace) {
                             //特征提取2
-//                            FaceFeature faceFeature2 = new FaceFeature();
+                    FaceFeature faceFeature2 = new FaceFeature();
 //                            int extractCode2 = faceEngine.extractFaceFeature(frameResut.getImageData(),
 //                                    frameResut.getIplImage().width(), frameResut.getIplImage().height(), ImageFormat.CP_PAF_BGR24, faceInfo
 //                                    , faceFeature2);

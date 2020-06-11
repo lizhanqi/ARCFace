@@ -22,3 +22,7 @@ https://www.jianshu.com/p/d4bc06b9f61e
 https://blog.csdn.net/qq_42873492/article/details/104214476?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase
 摄像头与推拉   
 https://blog.csdn.net/xxxlllbbb/article/details/104819683
+
+
+网络摄像头相关东西：
+https://www.cnblogs.com/arkenstone/p/7194226.html
