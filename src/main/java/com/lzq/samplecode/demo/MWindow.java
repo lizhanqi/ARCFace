@@ -1,15 +1,10 @@
 package com.lzq.samplecode.demo;
 
 import java.awt.BorderLayout;
-import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.beans.PropertyChangeEvent;
-import java.beans.PropertyChangeListener;
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
@@ -21,11 +16,10 @@ import javax.swing.JSlider;
 import javax.swing.border.EmptyBorder;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
-import com.lzq.samplecode.demo.PlayerMain;
 import uk.co.caprica.vlcj.component.EmbeddedMediaPlayerComponent;
 import uk.co.caprica.vlcj.player.embedded.EmbeddedMediaPlayer;
 
-public class Window extends JFrame {
+public class MWindow extends JFrame {
 
     private JPanel contentPane; //顶层容器，整个播放页面的容器
     private JMenuBar menuBar; //菜单栏
@@ -44,16 +38,14 @@ public class Window extends JFrame {
 
 
     //MainWindow构造方法，创建视屏播放的主界面
-    public Window() {
-        setTitle(" VideoPlayer Copyright@2015 by 南柯一梦");
+    public MWindow() {
+        setTitle("播放器");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(200, 80, 900, 600);
         contentPane = new JPanel();
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
         contentPane.setLayout(new BorderLayout(0, 0));
         setContentPane(contentPane);
-
-
         /*视频播放窗口中的菜单栏*/
         menuBar = new JMenuBar();
         setJMenuBar(menuBar);

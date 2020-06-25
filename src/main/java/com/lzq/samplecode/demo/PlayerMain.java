@@ -21,16 +21,13 @@ public class PlayerMain {
 
     public static void main(String[] args) {
 
-        // 环境配置，将vlc sdk导入到eclipse
-
+        // 环境配置，将vlc sdk导入到eclips
         // if(RuntimeUtil.isWindows()){ }
         // NativeLibrary.addSearchPath(RuntimeUtil.getLibVlcLibraryName(),
         // "D:\\vlc\\vlc-2.2.6\\sdk\\lib"); //导入的路径是vlc的安装路径
         NativeLibrary.addSearchPath(RuntimeUtil.getLibVlcLibraryName(), "C:\\Program Files\\VideoLAN\\VLC");
 //打印版本，用来检验是否获得文件
         System.out.println(LibVlc.INSTANCE.libvlc_get_version());
-
-
         Native.loadLibrary(RuntimeUtil.getLibVlcLibraryName(), LibVlc.class);
         // System.out.println(LibVlc.INSTANCE.libvlc_get_version());
 
