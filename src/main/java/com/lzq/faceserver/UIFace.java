@@ -32,6 +32,9 @@ import java.util.List;
 //https://blog.csdn.net/qq_42873492/article/details/104214476?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase
 //https://blog.csdn.net/xxxlllbbb/article/details/104819683
 
+/**
+ * 最原始方案
+ */
 //todo 播放卡顿 ， 人脸检索
 public class UIFace extends Thread {
     /**
@@ -61,7 +64,6 @@ public class UIFace extends Thread {
     static FaceEngine faceEngine = faceCore.init();
     static List<FaceInfo> currentShowFace = new LinkedList<FaceInfo>();
    CanvasFrame rootFrame;
-
     void initView(double v) {
         String name = Thread.currentThread().getName();
         System.out.println(name);
@@ -76,19 +78,15 @@ public class UIFace extends Thread {
             @Override
             public void mouseReleased(MouseEvent e) {
             }
-
             @Override
             public void mousePressed(MouseEvent e) {
             }
-
             @Override
             public void mouseExited(MouseEvent e) {
             }
-
             @Override
             public void mouseEntered(MouseEvent e) {
             }
-
             @Override
             public void mouseClicked(MouseEvent e) {
                 // 控制台输出点击的坐标
@@ -123,7 +121,6 @@ public class UIFace extends Thread {
                         byte[] imageData = new byte[iplImage.imageSize()];
                         iplImage.imageData().get(imageData);
                         FrameResut frameResut = new FrameResut(frame, imageData, iplImage);
-
                         //画人脸位置
                         for (FaceInfo faceInfo : currentShowFace) {
                             int left = faceInfo.getRect().getLeft();
@@ -153,8 +150,6 @@ public class UIFace extends Thread {
                             faceCore.saveFrame2JustFaceImage(subimage);
                         }
                         rootFrame.showImage(frame);
-
-
                     }
                 });
 

@@ -103,6 +103,8 @@ public class Tutorial {
 
             }
         });
+        String url="rtsp://admin:EKKAIN@192.168.1.100/Streaming/Channels/1";
+//        url="http://ivi.bupt.edu.cn/hls/cctv6hd.m3u8";
         mediaPlayerComponent.getMediaPlayer().playMedia("http://ivi.bupt.edu.cn/hls/cctv6hd.m3u8");
 
     }
